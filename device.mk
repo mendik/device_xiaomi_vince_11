@@ -1,6 +1,7 @@
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
+# SPDX-License-Identifier: Apache-2.0
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -72,9 +73,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+    
+# Inherit from msm8953-common
+$(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
 
 # Device Properties
 -include $(LOCAL_PATH)/prop.mk
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # ANT
 PRODUCT_PACKAGES += \
@@ -408,6 +417,9 @@ PRODUCT_COPY_FILES += \
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.vince
+    
+# Inherit from vendor blobs
+$(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
