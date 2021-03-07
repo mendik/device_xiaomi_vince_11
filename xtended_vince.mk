@@ -15,6 +15,13 @@ $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 # Inherit from vince device
 $(call inherit-product, device/xiaomi/vince/device.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1440
+
+XTENDED_BUILD_TYPE := UNOFFICIAL
+
+# Maintainer
+XTENDED_MAINTAINER := Mendik
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
 PRODUCT_NAME := xtended_vince
