@@ -31,3 +31,6 @@ VENDOR_SECURITY_PATCH := 2019-10-01
 
 # Inherit from the proprietary version
 include vendor/xiaomi/vince/BoardConfigVendor.mk
+
+# Never allow enable tag
+SELINUX_IGNORE_NEVERALLOWS := true
