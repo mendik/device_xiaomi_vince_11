@@ -1,0 +1,25 @@
+[
+  {
+    "repository": "Blacksuan19/kernel_dark_ages_vince",
+    "target_path": "kernel/xiaomi/vince",
+    "branch": "darky",
+    "remote": "github"
+  {
+    "repository": "Project-LegionOS/hardware_qcom-caf_display",
+    "target_path": "hardware/qcom-caf/msm8996/display",
+    "branch": "11-msm8996",
+    "remote": "github"
+},
+  {
+    "repository": "Project-LegionOS/hardware_qcom-caf_media",
+    "target_path": "hardware/qcom-caf/msm8996/media",
+    "branch": "11-msm8996",
+    "remote": "github"
+ },
+  {
+    "repository": "Project-LegionOS/hardware_qcom-caf_audio",
+    "target_path": "hardware/qcom-caf/msm8996/audio",
+    "branch": "11-msm8996",
+    "remote": "github"
+ }
+]
